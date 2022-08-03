@@ -1,0 +1,9 @@
+{
+	"name": "df-victoria",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1ce9c5c5-94e7-4287-ae10-2fa22bc3a9f3",
+		"tenantId": "a49e2ad8-3b8d-40e8-8c45-1505c9a243d3"
+	}
+}
