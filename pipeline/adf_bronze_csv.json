@@ -1,5 +1,5 @@
 {
-	"name": "df_bronze_csv",
+	"name": "adf_bronze_csv",
 	"properties": {
 		"folder": {
 			"name": "bronze"
