@@ -65,14 +65,34 @@
 					"referenceName": "ls_datalake_beca",
 					"type": "LinkedServiceReference"
 				},
+				"parameters": {
+					"container": {
+						"type": "string"
+					},
+					"folder": {
+						"type": "string"
+					},
+					"filename": {
+						"type": "string"
+					}
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "carros.csv",
-						"folderPath": "stage/csv",
-						"fileSystem": "raw"
+						"fileName": {
+							"value": "@dataset().filename",
+							"type": "Expression"
+						},
+						"folderPath": {
+							"value": "@dataset().folder",
+							"type": "Expression"
+						},
+						"fileSystem": {
+							"value": "@dataset().container",
+							"type": "Expression"
+						}
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
@@ -179,7 +199,11 @@
 							{
 								"referenceName": "dataset_csv",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"container": "raw",
+									"folder": "stage/csv",
+									"filename": "carros.csv"
+								}
 							}
 						],
 						"outputs": [
