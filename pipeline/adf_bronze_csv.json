@@ -37,6 +37,26 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "lookup_parameter",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('lookup_parameter').output.value",
+						"type": "Expression"
+					},
+					"batchCount": 5
+				}
 			}
 		],
 		"folder": {
