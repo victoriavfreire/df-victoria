@@ -42,7 +42,12 @@
 				"inputs": [
 					{
 						"referenceName": "dataset_csv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "raw",
+							"folder": "stage/csv",
+							"filename": "carros.csv"
+						}
 					}
 				],
 				"outputs": [
