@@ -69,7 +69,7 @@
 								},
 								"ifTrueActivities": [
 									{
-										"name": "Notebook1",
+										"name": "Notebook",
 										"type": "DatabricksNotebook",
 										"dependsOn": [],
 										"policy": {
@@ -79,7 +79,32 @@
 											"secureOutput": false,
 											"secureInput": false
 										},
-										"userProperties": []
+										"userProperties": [],
+										"typeProperties": {
+											"notebookPath": "/Users/vvalenti@emeal.nttdata.com/Beca/csv_ingestion",
+											"baseParameters": {
+												"file_name": {
+													"value": "@item().fileName",
+													"type": "Expression"
+												},
+												"table_name": {
+													"value": "@item().table",
+													"type": "Expression"
+												},
+												"database": {
+													"value": "@item().database",
+													"type": "Expression"
+												},
+												"delimiter": {
+													"value": "@item().delimiter",
+													"type": "Expression"
+												}
+											}
+										},
+										"linkedServiceName": {
+											"referenceName": "ls_databricks_beca",
+											"type": "LinkedServiceReference"
+										}
 									}
 								]
 							}
