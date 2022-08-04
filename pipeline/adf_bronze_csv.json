@@ -1,6 +1,43 @@
 {
 	"name": "adf_bronze_csv",
 	"properties": {
+		"activities": [
+			{
+				"name": "lookup_parameter",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "dataset_parameter",
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "raw",
+							"folder": "stage/parameter",
+							"filename": "parameters.csv"
+						}
+					}
+				}
+			}
+		],
 		"folder": {
 			"name": "bronze"
 		},
