@@ -34,7 +34,8 @@
 							"folder": "stage/parameter",
 							"filename": "parameters.csv"
 						}
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
