@@ -11,6 +11,9 @@
 		"ls_keyvault_beca_properties_typeProperties_baseUrl": {
 			"value": "https://kv-beca-vic.vault.azure.net/"
 		},
+		"ls_databricks_beca_properties_typeProperties_existingClusterId": {
+			"value": "0804-140340-fikkby3c"
+		},
 		"containerUri": {
 			"value": ""
 		},

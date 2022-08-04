@@ -15,6 +15,10 @@
 			"type": "string",
 			"defaultValue": "https://kv-beca-vic.vault.azure.net/"
 		},
+		"ls_databricks_beca_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0804-140340-fikkby3c"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -47,6 +51,9 @@
 					},
 					"ls_datalake_beca_properties_typeProperties_url": {
 						"value": "[parameters('ls_datalake_beca_properties_typeProperties_url')]"
+					},
+					"ls_databricks_beca_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('ls_databricks_beca_properties_typeProperties_existingClusterId')]"
 					}
 				}
 			},
